@@ -1,0 +1,38 @@
+<% if @uploader %>
+    <%= yield :title %>
+
+    <div class="uk-width-1-1 uk-placeholder uk-text-center" uk-form-custom>
+      <span uk-icon="icon: cloud-upload"></span>
+      <span class="uk-text-middle"><%=t(:attach)%></span>
+      <%= direct_upload_form_for @uploader do |f| %>
+      <div>
+        <%= f.file_field :name %>
+        <%= f.button t(:upload), class: 'uk-button uk-button-primary' %>
+      </div>
+      <% end %>
+    </div>
+<% end %>
+
+<% if params[:key].present? || @photo.image.present? %>
+  <%= simple_form_for([@photo.mural, @photo], wrapper: :form) do |f| %>
+      <div uk-grid>
+        <div class="uk-width-auto">
+          <%= yield :title %>
+        </div>
+        <div class="uk-width-expand">
+          <div class="uk-float-right">
+            <%= yield :links %>
+            <%= f.button :submit, class: 'uk-button uk-button-primary' %>
+          </div>
+        </div>
+      </div>
+      <%= f.error_notification %>
+
+      <div class="uk-margin-top">
+        <%=image_tag(@uploader.direct_fog_url+@photo.image_key)%>
+        <%= f.input :image_key, as: :string, input_html: {value: @photo.image_identifier} %>
+        <%= f.input :copyright %>
+        <%= f.association :mural %>
+      </div>
+  <% end %>
+<% end %>

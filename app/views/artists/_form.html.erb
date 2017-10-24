@@ -1,0 +1,42 @@
+<%= simple_form_for(@artist, wrapper: :form) do |f| %>
+  <div uk-grid>
+    <div class="uk-width-auto">
+      <%= yield :title %>
+    </div>
+    <div class="uk-width-expand">
+      <div class="uk-float-right">
+        <%= yield :links %>
+        <%= f.button :submit, class: 'uk-button uk-button-primary' %>
+      </div>
+    </div>
+  </div>
+
+  <%= f.error_notification %>
+
+  <div>
+    <div class="uk-margin-top uk-child-width-1-4" uk-grid>
+      <div><%= f.association :city, prompt: :translate %></div>
+      <div><%= f.input :link %></div>
+      <div><%= f.input :name %></div>
+      <div><%= f.input :slug if @artist.slug.present? %></div>
+    </div>
+
+    <ul uk-tab>
+      <% @artist.globalize_locales.each do |locale| %>
+          <li><a href="#"><%=locale%></a></li>
+      <% end %>
+    </ul>
+
+    <div class="uk-switcher">
+      <% @artist.globalize_locales.each do |locale| %>
+          <div>
+            <% @artist.globalize_attribute_names.each do |globalize_attribute_name| %>
+                <% if globalize_attribute_name.to_s.end_with?(locale.to_s) %>
+                    <%= f.input globalize_attribute_name %>
+                <% end %>
+            <% end %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

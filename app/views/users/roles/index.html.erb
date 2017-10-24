@@ -1,0 +1,36 @@
+<div class="uk-container uk-margin-top">
+  <div uk-grid>
+    <div class="uk-width-auto">
+      <legend class="uk-legend">Users Roles</legend>
+    </div>
+    <div class="uk-width-expand">
+      <div class="uk-float-right">
+        <%= link_to t(:new), new_users_role_path, class: 'uk-button uk-button-primary' %>
+      </div>
+    </div>
+  </div>
+
+  <table class="uk-table">
+    <thead>
+      <tr>
+          <th class="uk-table-expand"><%=t(:name)%></th>
+          <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @users_roles.each do |users_role| %>
+        <tr>
+          <td><%= users_role.name %></td>
+          <td class="uk-table-shrink"><%= link_to t(:show), users_role %></td>
+          <td class="uk-table-shrink"><%= link_to t(:edit), edit_users_role_path(users_role) %></td>
+          <td class="uk-table-shrink">
+            <%= link_to t(:destroy), users_role, method: :delete, data: { confirm: t(:confirm) } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= paginate @users_roles, views_prefix: 'layouts' %>

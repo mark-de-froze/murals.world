@@ -1,0 +1,13 @@
+<% content_for :title do %>
+<legend class="uk-legend"><%= t(:editing_city) %></legend>
+<% end %>
+
+<% content_for :links do %>
+<%= link_to t(:back), cities_path, class: 'uk-button uk-button-default' %>
+<%= link_to t(:show), @city, class: 'uk-button uk-button-default' %>
+<%= link_to t(:destroy), @city, method: :delete, class: 'uk-button uk-button-danger', data: { confirm: t(:confirm) } %>
+<% end %>
+
+<div class="uk-container uk-margin-top">
+  <%= render 'form', city: @city %>
+</div>

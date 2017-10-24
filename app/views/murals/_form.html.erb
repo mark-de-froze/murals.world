@@ -1,0 +1,91 @@
+<% if @uploader %>
+    <div class="uk-float-right uk-margin-small-left">
+      <%= direct_upload_form_for @uploader do |f| %>
+          <div class="upload" uk-form-custom>
+            <%= f.file_field :name %>
+            <%= f.button t(:upload), class: 'uk-button uk-button-primary' %>
+          </div>
+      <% end %>
+    </div>
+<% end %>
+<%= simple_form_for(@mural, wrapper: :form) do |f| %>
+  <div uk-grid>
+    <div class="uk-width-auto">
+      <%= yield :title %>
+    </div>
+    <div class="uk-width-expand">
+      <div class="uk-float-right">
+        <%= yield :links %>
+        <%= f.button :submit, class: 'uk-button uk-button-primary' %>
+      </div>
+    </div>
+  </div>
+
+  <%= f.error_notification %>
+
+  <div>
+    <div uk-grid>
+      <div class="uk-width-1-3">
+        <%= f.association :city, prompt: :translate %>
+        <%= f.input :place %>
+        <div class="uk-child-width-1-2" uk-grid>
+          <div><%= f.input :latitude %></div>
+          <div><%= f.input :longitude %></div>
+        </div>
+
+        <%= f.association :artist, prompt: :translate %>
+      </div>
+      <div class="uk-width-2-3">
+        <div id="map" class="uk-width-1-1 uk-height-medium uk-margin-top"></div>
+        <%= javascript_include_tag 'murals/form' %>
+      </div>
+    </div>
+
+    <div class="uk-margin-top">
+      <%= f.input :created_at %>
+
+      <%= f.input :photo_key, as: :string if @mural.photo.present? || params[:key].present? %>
+
+      <% if @mural.photos.present? %>
+        <%= f.simple_fields_for :photos do |pf| %>
+
+        <div  class="uk-margin-top" uk-grid>
+          <div class="uk-width-medium">
+            <div class="uk-inline">
+              <%= render 'photos/photo', photo: pf.object %>
+            </div>
+          </div>
+          <div class="uk-width-expand">
+            <%= pf.input :image_key, as: :string, input_html: {value: pf.object.image_identifier} %>
+            <%= pf.input :copyright, as: :string %>
+          </div>
+          <div class="uk-width-auto">
+            <div class="uk-margin-top">
+              <%=t(:destroy)%>: <%= pf.check_box :_destroy, class: 'uk-checkbox' %>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+
+
+    <ul uk-tab>
+      <% @mural.globalize_locales.each do |locale| %>
+      <li><a href="#"><%=locale%></a></li>
+      <% end %>
+    </ul>
+
+    <div class="uk-switcher uk-margin-bottom">
+      <% @mural.globalize_locales.each do |locale| %>
+          <div>
+          <% @mural.globalize_attribute_names.each do |attr| %>
+              <% if attr.to_s.end_with?(locale.to_s) %>
+                  <%= f.input attr %>
+              <% end %>
+          <% end %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

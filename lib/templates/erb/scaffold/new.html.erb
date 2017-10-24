@@ -1,0 +1,11 @@
+<%% content_for :title do %>
+<legend class="uk-legend"><%%= t(:new) %> <%%= t(:<%= singular_table_name %>) %></legend>
+<%% end %>
+
+<%% content_for :links do %>
+<%%= link_to t(:back), <%= index_helper %>_path, class: 'uk-button uk-button-default' %>
+<%% end %>
+
+<div class="uk-container uk-margin-top">
+  <%%= render 'form', <%= singular_table_name %>: @<%= singular_table_name %> %>
+</div>

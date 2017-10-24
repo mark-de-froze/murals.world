@@ -1,0 +1,11 @@
+<% content_for :title do %>
+<legend class="uk-legend"><%= t(:new) %> <%= t(:users_role) %></legend>
+<% end %>
+
+<% content_for :links do %>
+<%= link_to t(:back), users_roles_path, class: 'uk-button uk-button-default' %>
+<% end %>
+
+<div class="uk-container uk-margin-top">
+  <%= render 'form', users_role: @users_role %>
+</div>

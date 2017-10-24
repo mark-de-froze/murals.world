@@ -1,0 +1,169 @@
+de:
+  app_name: "Murals"
+  description: "Murals all over the world. Research the history of murals and their location. Get directions and explore your city."
+  title: "Karte von Murals aus der ganzen Welt"
+  about:
+    index:
+      title: "Über uns"
+  en: "Englisch"
+  uk: "Ukrainisch"
+  ru: "Russisch"
+  es: "Spanisch"
+  de: "Deutsche"
+
+  kyiv: "Kiew"
+
+  search: "Suche"
+  login: "Anmeldung"
+  logout: "Ausloggen"
+  attach: "Hängen Sie das Foto, "
+  upload: "Hochladen"
+
+  you: "Sie"
+  new: "Hinzufügen"
+  show: "Öffnen"
+  edit: "Bearbeiten"
+  destroy: "Löschen"
+  confirm: "Bist du sicher?"
+  support_geolocation: "Ihr Browser unterstützt keine Geolokalisierung"
+  failed_geolocation: "Geolocation fehlgeschlagen: "
+  back: "Zurück"
+  count: "Anzahl der"
+  name: "Name"
+  image: "Image"
+  copyright: "Copyright"
+  editing: "Bearbeitung"
+
+  switch_to: "Wechseln Sie zu %{lang}"
+
+  cities: "Städte"
+  city: "Stadt"
+  edit_city: "Bearbeiten stadt"
+  editing_city: "Bearbeitung stadt"
+  destroy_city: "Löschen stadt"
+
+  murals: "Murals"
+  destroy_translate: "Löschen übersetzen %{lang}"
+  confirm_translate: "Sind Sie sicher, dass Sie diese %{lang} Übersetzung löschen möchten? Das kann nicht rückgängig gemacht werden."
+  edit_mural: "Bearbeiten Mural"
+  add_photo: "Fügen Sie Fotos"
+  edit_photos: "Bearbeiten Fotos"
+  editing_photo: "Bearbeitung Foto"
+  editing_mural: "Bearbeitung Foto"
+  destroy_mural: "Löschen Mural"
+  photo: "Foto"
+  artist: "Künstler"
+  mural: "Mural"
+  photos_mural: "Мural Fotos"
+
+  artists: "Künstler"
+  from: "von %{from}"
+  edit_artist: "Bearbeiten ein Künstler"
+  editing_artist: "Bearbeitung ein Künstler"
+
+  create_notice: "Ressource wurde erfolgreich erstellt."
+  update_notice: "Ressource wurde erfolgreich aktualisiert."
+  destroy_notice: "Ressource wurde erfolgreich zerstört."
+  deleted_translation_notice: "%{lang} wurde erfolgreich gelöscht."
+  deleted_translation_cannot_notice: "%{lang} Dies ist die einzige Übersetzung und es kann nicht gelöscht werden. Stattdessen löschen Sie den Eintrag."
+
+  geolocate1: "Sie sind innerhalb von "
+  geolocate2: " Metern von diesem Punkt"
+
+  views:
+    pagination:
+      first: "<span uk-pagination-previous></span><span uk-pagination-previous></span> Erste"
+      last: "Letzte <span uk-pagination-next></span><span uk-pagination-next></span>"
+      previous: "<span uk-pagination-previous></span> Vorherige"
+      next: "Folgeseite <span uk-pagination-next></span>"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Nicht gefunden"
+          one: "Angezeigt <b>1</b> %{entry_name}"
+          other: "Angezeigt <b>alle %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Angezeigt %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> von <b>%{total}</b>"
+
+  simple_form:
+    "yes": 'Ja'
+    "no": 'Nein'
+    required:
+      text: 'erforderlich'
+      mark: '*'
+    error_notification:
+      default_message: "Bitte überprüfen Sie die folgenden Probleme:"
+    labels:
+      defaults:
+        created_at: "Hergestellt in"
+        photo_key: "Photo"
+        image_key: "Photo"
+
+        name: "Name"
+        latitude: "Breite"
+        longitude: "Länge"
+        country: "Land"
+        city: "Stadt"
+        artist: "Künstler"
+        link: "Verknüpfung"
+        image: "Image"
+        copyright: "Copyright"
+        mural: "Mural"
+
+        place: "Ort"
+        title: "Titel"
+        content: "Inhalt"
+        slug: "Freundliche URL"
+        bio: "Biografie"
+
+        place_en: "Place"
+        title_en: "Titel"
+        content_en: "Inhalt"
+        slug_en: "Freundliche URL"
+        bio_en: "Biografie"
+
+        place_uk: "Place"
+        title_uk: "Titel"
+        content_uk: "Inhalt"
+        slug_uk: "Freundliche URL"
+        bio_uk: "Biografie"
+
+        place_ru: "Place"
+        title_ru: "Titel"
+        content_ru: "Inhalt"
+        slug_ru: "Freundliche URL"
+        bio_ru: "Biografie"
+
+        place_es: "Place"
+        title_es: "Titel"
+        content_es: "Inhalt"
+        slug_es: "Freundliche URL"
+        bio_es: "Biografie"
+
+        place_de: "Place"
+        title_de: "Titel"
+        content_de: "Inhalt"
+        slug_de: "Freundliche URL"
+        bio_de: "Biografie"
+    prompts:
+      defaults:
+        country: "Bitte auswählen"
+        mural: "Bitte auswählen"
+        city: "Bitte auswählen"
+        artist: "Bitte auswählen"
+  helpers:
+    submit:
+      city:
+        create: 'Hinzufügen'
+        update: 'Aktualisieren'
+      mural:
+        create: 'Hinzufügen'
+        update: 'Aktualisieren'
+      artist:
+        create: 'Hinzufügen'
+        update: 'Aktualisieren'
+      photo:
+        create: 'Hinzufügen'
+        update: 'Aktualisieren'

@@ -1,0 +1,8 @@
+<div>
+  <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+  <div class="uk-drop <%='uk-open' if @search.present?%>" uk-drop="mode: click; pos: left-center; offset: 0">
+    <form class="uk-search uk-search-navbar uk-width-1-1" action="<%=@search_url%>">
+      <input class="uk-search-input" type="search" placeholder="<%=t(:search)%>..." name="search" value="<%=@search%>" autofocus>
+    </form>
+  </div>
+</div>

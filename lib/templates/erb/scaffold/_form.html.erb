@@ -1,0 +1,21 @@
+<%%= simple_form_for(@<%= singular_table_name %>, wrapper: :form) do |f| %>
+  <div uk-grid>
+    <div class="uk-width-auto">
+      <%%= yield :title %>
+    </div>
+    <div class="uk-width-expand">
+      <div class="uk-float-right">
+        <%%= yield :links %>
+        <%%= f.button :submit, class: 'uk-button uk-button-primary' %>
+      </div>
+    </div>
+  </div>
+
+  <%%= f.error_notification %>
+
+  <div>
+  <%- attributes.each do |attribute| -%>
+    <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %> %>
+  <%- end -%>
+  </div>
+<%% end %>

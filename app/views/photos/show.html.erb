@@ -1,0 +1,16 @@
+<div class="uk-card uk-card-default">
+  <div class="uk-card-body">
+    <dl class="uk-description-list uk-description-list-divider">
+      <dt><%= t(:image)%></dt>
+      <dd><%= image_tag(@photo.image, width: '300')%></dd>
+      <dt><%= t(:copyright)%></dt>
+      <dd><%= @photo.copyright %></dd>
+      <dt><%= t(:mural)%></dt>
+      <dd><%= @photo.mural.to_label %></dd>
+    </dl>
+  </div>
+  <div class="uk-card-footer">
+    <%= link_to t(:edit), edit_mural_photo_path(@photo.mural, @photo), class: 'uk-button uk-button-text' %> |
+    <%= link_to t(:back), mural_photos_path(@photo.mural), class: 'uk-button uk-button-text' %>
+  </div>
+</div>

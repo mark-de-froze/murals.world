@@ -1,0 +1,58 @@
+<% content_for :links_menu do %>
+  <li class="uk-nav-divider"></li>
+  <li><%= link_to t(:edit_mural), edit_mural_path(@mural) %></li>
+  <li><%= link_to t(:add_photo), new_mural_photo_path(params[:id]) %></li>
+  <li><%= link_to t(:edit_photos), mural_photos_path(@mural) %></li>
+  <li class="uk-nav-divider"></li>
+  <% @mural.translations.each do |translation| %>
+      <% Globalize.with_locale(translation.locale) do %>
+          <li>
+            <%= link_to t(:destroy_translate, lang: t(translation.locale)), mural_path(@mural, translation_locale: translation.locale), method: :delete, data: { confirm: t(:confirm_translate, :lang => t(translation.locale)) } %>
+          </li>
+      <% end %>
+  <% end %>
+    <li class="uk-nav-divider"></li>
+  <li><%= link_to t(:destroy_mural), mural_path(@mural), method: :delete, data: { confirm: t(:confirm)} %></li>
+<% end %>
+
+<% content_for :links_back do %>
+    <li><a href="<%= murals_path%>" title="<%=t(:back)%>" uk-icon="icon: chevron-left"></a></li>
+<% end %>
+
+<% if @photos.present? %>
+<div class="uk-inline uk-width-1-1">
+  <ul class="uk-dotnav uk-position-bottom uk-overlay uk-overlay-default uk-padding-small uk-position-z-index" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+    <% @photos.each do |photo| %>
+      <li><a href="#"><%= t(:photo) %> <%= photo.id %></a></li>
+    <% end %>
+  </ul>
+
+  <ul class="uk-switcher">
+    <% @photos.each do |photo| %>
+      <li>
+        <div style="background-image: url(<%= photo.image %>);" class="uk-background-cover uk-height-large uk-background-muted uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle">
+          <% if photo.copyright.present? %>
+              <div class="uk-position-top-right uk-padding-small uk-overlay-default"><%=t(:photo)%>:
+                <%= link_to photo.copyright_host, photo.copyright, rel: 'nofollow' %>
+              </div>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="uk-container uk-margin">
+  <article class="uk-article">
+    <h1 class="uk-article-title"><%= @mural.title %> <%= @mural.to_label %></h1>
+    <p class="uk-text-lead"><%= @mural.content %></p>
+    <% if @mural.artist %>
+    <blockquote cite="#">
+      <footer><%= t(:artist)%> <cite><%=link_to @mural.artist.to_label, @mural.artist %></cite></footer>
+    </blockquote>
+    <% end %>
+  </article>
+</div>
+<div id="mural" data-src="<%=@mural.photo%>"></div>
+<div id="map" data-latitude="<%=@mural.latitude%>" data-longitude="<%=@mural.longitude%>" class="uk-width-1-1" uk-height-viewport></div>
+<%= javascript_include_tag 'murals/show' %>

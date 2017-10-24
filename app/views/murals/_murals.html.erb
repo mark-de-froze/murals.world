@@ -1,0 +1,36 @@
+<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-6@xl uk-flex uk-flex-top" uk-grid>
+  <% @murals.each do |mural| %>
+      <div>
+        <a href="<%= mural_path(mural) %>">
+          <div class="uk-inline uk-margin-remove uk-width-1-1 uk-height-medium">
+            <div class="uk-cover-container">
+              <canvas height="300"></canvas>
+              <% if mural.photo.present? %>
+                <img src="<%= mural.photo %>" uk-cover>
+              <% end %>
+            </div>
+
+            <% if mural.artist && !@artist %>
+                <div class="uk-position-top-left uk-padding-small uk-overlay-primary">
+                  <%= link_to mural.artist.name, mural.artist %>
+                </div>
+            <% end %>
+
+            <% if current_user_is_admin %>
+                <div class="uk-position-top-right uk-padding-small uk-overlay-primary uk-text-center">
+                  <%= link_to content_tag(:span, nil, 'uk-icon': :'icon: pencil', title: t(:edit)),
+                              edit_mural_path(mural) %>
+                  <%= link_to content_tag(:span, nil, 'uk-icon': :'icon: trash', title: t(:destroy)),
+                              mural, method: :delete, data: { confirm: t(:confirm) } %>
+                </div>
+            <% end %>
+
+            <div class="uk-position-bottom uk-padding-small uk-overlay-primary uk-text-center">
+              <%= mural.to_label %>
+            </div>
+          </div>
+        </a>
+      </div>
+  <% end %>
+</div>
+<%= paginate @murals, views_prefix: 'layouts' %>

@@ -1,0 +1,180 @@
+uk:
+  app_name: "Murals"
+  description: "Мурали з усього світу. Дізнавайтеся історію появи муралів та їх місцезнаходження. Прокладайте маршрути та вивчайте своє місто."
+  title: "мапа муралів з усього світу"
+  about:
+    index:
+      title: "Про проект"
+  en: "англійську"
+  uk: "українську"
+  ru: "російську"
+  es: "іспанську"
+  de: "німецьку"
+
+  kyiv: "Київ"
+
+  search: "Пошук"
+  login: "Aвторизуватись"
+  logout: "Вийти"
+  attach: "Прикріпіть фотографію, перетягнувши її сюди або"
+  upload: "завантажте"
+
+  you: "Ви"
+  new: "Додати"
+  show: "Показати"
+  edit: "Редагувати"
+  destroy: "Видалити"
+  confirm: "Ви впевнені?"
+  support_geolocation: "Ваш веб-браузер не підтримує географічне розташування"
+  failed_geolocation: "Помилка геолокації: "
+  back: "Назад"
+  count: "Кількість"
+  name: "Ім'я"
+  image: "Зображення"
+  copyright: "Авторське право"
+  editing: "Редагування"
+
+  switch_to: "Переключитися на %{lang}"
+
+  cities: "Міста"
+  city: "місто"
+  edit_city: "Редагувати місто"
+  editing_city: "Редагування міста"
+  destroy_city: "Видалити місто"
+
+  murals: "Мурали"
+  destroy_translate: "Видалити %{lang} версію переклада"
+  confirm_translate: "Ви впевнені, що хочете видалити %{lang} версію перекладу? Це не може бути скасоване."
+  edit_mural: "Редагувати мурал"
+  add_photo: "Додати фотографію"
+  edit_photos: "Редагувати фотографії"
+  editing_photo: "Редагування фото"
+  editing_mural: "Редагування муралу"
+  destroy_mural: "Видалити мурал"
+  photo: "Фото"
+  artist: "художник"
+  mural: "мурал"
+  photos_mural: "Фотографії мурала"
+
+  artists: "Художники"
+  from: "з %{from}а"
+  edit_artist: "Редагувати художника"
+  editing_artist: "Редагування художника"
+
+  create_notice: "Запис було успішно створено."
+  update_notice: "Запис було успішно оновлено."
+  destroy_notice: "Запис було успішно видалено."
+  deleted_translation_notice: "Видалено %{lang} версію переклад успішно."
+  deleted_translation_cannot_notice: "%{lang} є єдиним перекладом, який залишився і не може бути видалений. Замість цього видаліть запис."
+
+  geolocate1: "Ви знаходитесь в межах "
+  geolocate2: " метрів від цієї точки"
+
+  views:
+    pagination:
+      first: "<span uk-pagination-previous></span><span uk-pagination-previous></span> Перша"
+      last: "Остання <span uk-pagination-next></span><span uk-pagination-next></span>"
+      previous: "<span uk-pagination-previous></span> Попередня"
+      next: "Наступна <span uk-pagination-next></span>"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Не знайдено %{entry_name}"
+          one: "Відображенно <b>1</b> %{entry_name}"
+          other: "Відображенно <b>всі %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Відображенно %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> з <b>%{total}</b> в цілому"
+
+  simple_form:
+    "yes": 'Так'
+    "no": 'Ні'
+    required:
+      text: "обов'язково"
+      mark: '*'
+    error_notification:
+      default_message: "Перегляньте наведені нижче проблеми:"
+    labels:
+      defaults:
+        created_at: "Дата створення"
+        photo_key: "Фото"
+        image_key: "Фото"
+
+        name: "Ім'я"
+        latitude: "Широта"
+        longitude: "Довгота"
+        country: "Країна"
+        city: "Місто"
+        artist: "Художник"
+        link: "Сайт"
+        image: "Зображення"
+        copyright: "Посилання на джерело"
+        mural: "Мурал"
+
+        place: "Місце"
+        title: "Назва"
+        content: "Вміст"
+        slug: "Дружня URL-адреса"
+        bio: "Біографія"
+
+        place_en: "Місце"
+        title_en: "Назва"
+        content_en: "Вміст"
+        slug_en: "Дружня URL-адреса"
+        bio_en: "Біографія"
+
+        place_uk: "Місце"
+        title_uk: "Назва"
+        content_uk: "Вміст"
+        slug_uk: "Дружня URL-адреса"
+        bio_uk: "Біографія"
+
+        place_ru: "Місце"
+        title_ru: "Назва"
+        content_ru: "Вміст"
+        slug_ru: "Дружня URL-адреса"
+        bio_ru: "Біографія"
+
+        place_es: "Місце"
+        title_es: "Назва"
+        content_es: "Вміст"
+        slug_es: "Дружня URL-адреса"
+        bio_es: "Біографія"
+
+        place_de: "Місце"
+        title_de: "Назва"
+        content_de: "Вміст"
+        slug_de: "Дружня URL-адреса"
+        bio_de: "Біографія"
+    placeholders:
+      city:
+          name: "Вкажіть назву міста"
+      defaults:
+        name: "Вкажіть ім'я"
+        place: "Вкажіть місце"
+        link: "Вкажіть особистий сайт"
+        latitude: "Введіть широту"
+        longitude: "Введіть довготу"
+        photo: "Прикріпіть фото, перетягнувши їх сюди або вибравши файл"
+        image: "Прикріпіть фото, перетягнувши їх сюди або вибравши файл"
+    prompts:
+      defaults:
+        country: "Будь ласка, виберіть країну"
+        mural: "Будь ласка, виберіть мурал"
+        city: "Будь ласка, виберіть місто"
+        artist: "Будь ласка, виберіть виконавця"
+  helpers:
+    submit:
+      city:
+        create: 'Додати місто'
+        update: 'Оновити місто'
+      mural:
+        create: 'Додати мурал'
+        update: 'Оновити мурал'
+      artist:
+        create: 'Додати художника'
+        update: 'Оновити художника'
+      photo:
+        create: 'Додати фото'
+        update: 'Оновити фото'

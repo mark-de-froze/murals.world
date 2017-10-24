@@ -1,0 +1,179 @@
+en:
+  app_name: "Murals"
+  description: "Murals all over the world. Research the history of murals and their location. Get directions and explore your city."
+  title: "map of murals from around the world"
+  about:
+    index:
+      title: "About us"
+
+  en: "English"
+  uk: "Ukrainian"
+  ru: "Russian"
+  es: "Spanish"
+  de: "German"
+
+  kyiv: "Kyiv"
+
+  search: "Search"
+  login: "Login"
+  logout: "Logout"
+  attach: "Attach binaries by dropping them here or"
+  upload: "Upload"
+
+  you: "You"
+  new: "New"
+  show: "Show"
+  edit: "Edit"
+  destroy: "Destroy"
+  confirm: "Are you sure?"
+  support_geolocation: "Your browser does not support geolocation"
+  failed_geolocation: "Geolocation failed: "
+  back: "Back"
+  count: "Count"
+  name: "Name"
+  image: "Image"
+  copyright: "Copyright"
+  editing: "Editing"
+
+  switch_to: "Switch to %{lang}"
+
+  cities: "Cities"
+  city: "city"
+  edit_city: "Edit city"
+  editing_city: "Editing city"
+  destroy_city: "Destroy city"
+
+  murals: "Murals"
+  destroy_translate: "Destroy %{lang} translate"
+  confirm_translate: "Are you sure you want to delete this %{lang} translation? This cannot be undone."
+  edit_mural: "Edit mural"
+  add_photo: "Add photo"
+  edit_photos: "Edit photos"
+  editing_photo: "Editing photo"
+  editing_mural: "Editing photo"
+  destroy_mural: "Destroy mural"
+  photo: "Photo"
+  artist: "artist"
+  mural: "mural"
+  photos_mural: "Мural photos"
+
+  artists: "Artists"
+  from: "from %{from}"
+  edit_artist: "Edit artist"
+  editing_artist: "Editing artist"
+
+  create_notice: "Record was successfully created."
+  update_notice: "Record was successfully updated."
+  destroy_notice: "Record was successfully destroyed."
+  deleted_translation_notice: "%{lang} has been successfully deleted."
+  deleted_translation_cannot_notice: "%{lang} is the only translation left and cannot be deleted. Delete the record, instead."
+
+  geolocate1: "You are within "
+  geolocate2: " meters from this point"
+
+  views:
+    pagination:
+      first: "<span uk-pagination-previous></span><span uk-pagination-previous></span> First"
+      last: "Last <span uk-pagination-next></span><span uk-pagination-next></span>"
+      previous: "<span uk-pagination-previous></span> Previous"
+      next: "Next <span uk-pagination-next></span>"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "No %{entry_name} found"
+          one: "Displaying <b>1</b> %{entry_name}"
+          other: "Displaying <b>all %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"
+    labels:
+      defaults:
+        created_at: "Created at"
+        photo_key: "Photo"
+        image_key: "Photo"
+
+        name: "Name"
+        latitude: "Latitude"
+        longitude: "Longitude"
+        country: "Country"
+        city: "City"
+        artist: "Artist"
+        link: "Link"
+        image: "Image"
+        copyright: "Copyright"
+        mural: "Mural"
+
+        place: "Place"
+        title: "Title"
+        content: "Content"
+        slug: "Friendly URL"
+        bio: "Biography"
+
+        place_en: "Place"
+        title_en: "Title"
+        content_en: "Content"
+        slug_en: "Friendly URL"
+        bio_en: "Biography"
+
+        place_uk: "Place"
+        title_uk: "Title"
+        content_uk: "Content"
+        slug_uk: "Friendly URL"
+        bio_uk: "Biography"
+
+        place_ru: "Place"
+        title_ru: "Title"
+        content_ru: "Content"
+        slug_ru: "Friendly URL"
+        bio_ru: "Biography"
+
+        place_es: "Place"
+        title_es: "Title"
+        content_es: "Content"
+        slug_es: "Friendly URL"
+        bio_es: "Biography"
+
+        place_de: "Place"
+        title_de: "Title"
+        content_de: "Content"
+        slug_de: "Friendly URL"
+        bio_de: "Biography"
+    placeholders:
+      defaults:
+        email: "Enter email"
+        password: "Enter password"
+        name: "Enter name"
+        place: "Enter place"
+        link: "Enter link"
+        latitude: "Enter latitude"
+        longitude: "Enter longitude"
+    prompts:
+      defaults:
+        country: "Please select country"
+        mural: "Please select mural"
+        city: "Please select city"
+        artist: "Please select artist"
+  helpers:
+    submit:
+      city:
+        create: 'Create city'
+        update: 'Update city'
+      mural:
+        create: 'Create mural'
+        update: 'Update mural'
+      artist:
+        create: 'Create artist'
+        update: 'Update artist'
+      photo:
+        create: 'Create photo'
+        update: 'Update photo'

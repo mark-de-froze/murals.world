@@ -1,0 +1,26 @@
+<% content_for :links_menu do %>
+  <li class="uk-nav-divider"></li>
+  <li><%= link_to t(:edit_city), edit_city_path(@city) %></li>
+    <li><%= link_to t(:destroy_city), city_path(@city), method: :delete, data: { confirm: t(:confirm)} %></li>
+<% end %>
+
+<% content_for :links_back do %>
+    <li><a href="<%= cities_path %>" title="<%=t(:back)%>" uk-icon="icon: chevron-left"></a></li>
+<% end %>
+
+<div id="map" data-latitude="<%=@city.latitude%>" data-longitude="<%=@city.longitude%>" class="uk-width-1-1" uk-height-viewport="offset-top: true"></div>
+<script>
+    var addressPoints = [
+        <% @city.murals.select('id', 'photo', 'latitude', 'longitude').each do |mural| %>
+        [<%=mural.latitude%>, <%=mural.longitude%>, '<a href="<%=mural_path(mural.id)%>"><div style="background-image: url(\'<%=mural.photo%>\')" class="uk-background-cover uk-background-top-center uk-width-medium uk-height-medium"></div></a>'],
+        <% end %>
+    ];
+</script>
+<%= stylesheet_link_tag    'https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.7/leaflet-routing-machine.min.css', media: 'all' %>
+<%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.7/leaflet-routing-machine.min.js' %>
+
+<%= stylesheet_link_tag    'https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css', media: 'all' %>
+<%= stylesheet_link_tag    'https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css', media: 'all' %>
+<%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js' %>
+
+<%= javascript_include_tag 'cities/show' %>

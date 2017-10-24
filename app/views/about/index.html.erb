@@ -1,0 +1,19 @@
+<div class="uk-container uk-container-expand uk-margin-top">
+  <article class="uk-article">
+
+    <h1 class="uk-article-title"><a class="uk-link-reset" href="/"><%=t(:app_name)%></a> - <%=t(:title)%></h1>
+    <%= render partial: I18n::locale.to_s %>
+    <hr>
+    <div class="uk-grid-small uk-child-width-auto" uk-grid>
+      <div>
+        <a class="uk-button uk-button-text" href="<%=murals_path%>"><%=t(:murals)%></a>
+      </div>
+      <div>
+        <a class="uk-button uk-button-text" href="<%=cities_path%>"><%=t(:cities)%></a>
+      </div>
+      <div>
+        <a class="uk-button uk-button-text" href="<%=artists_path%>"><%=t(:artists)%></a>
+      </div>
+    </div>
+  </article>
+</div>

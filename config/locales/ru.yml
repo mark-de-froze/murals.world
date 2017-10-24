@@ -1,0 +1,179 @@
+ru:
+  app_name: "Murals"
+  description: "Муралы со всего мира. Узнавайте историю появления муралов и их местонахождение. Прокладывайте маршруты и изучайте свой город."
+  title: "карта муралов со всего мира"
+  about:
+    index:
+      title: "О проекте"
+  en: "английский"
+  uk: "украинский"
+  ru: "русский"
+  es: "испанский"
+  de: "немецкий"
+
+  kyiv: "Киев"
+
+  search: "Поиск"
+  login: "Авторизоваться"
+  logout: "Выйти"
+  attach: "Прикрепите фотографию, перетянув ее сюда или"
+  upload: "загрузите"
+
+  you: "Вы"
+  new: "Добавить"
+  show: "Показать"
+  edit: "Редактировать"
+  destroy: "Удалить"
+  confirm: "Вы уверен?"
+  support_geolocation: "Ваш браузер не поддерживает геолокацию"
+  failed_geolocation: "Ошибка геолокации: "
+  back: "Назад"
+  count: "Количество"
+  name: "Имя"
+  image: "Изображение"
+  copyright: "Авторские права"
+  editing: "Редактирование"
+
+  switch_to: "Переключить на %{lang}"
+
+  cities: "Города"
+  city: "город"
+  edit_city: "Редактировать город"
+  editing_city: "Редактирование город"
+  destroy_city: "Удалить город"
+
+  murals: "Муралы"
+  destroy_translate: "Удалить %{lang} translate"
+  confirm_translate: "Вы действительно хотите удалить %{lang} перевод? Это не может быть отменено."
+  edit_мурал: "Редактировать мурал"
+  add_photo: "Добавить фото"
+  edit_photos: "Редактировать фотографии"
+  editing_photo: "Редактирование фото"
+  editing_мурал: "Редактирование фото"
+  destroy_мурал: "Удалить мурал"
+  photo: "Фото"
+  artist: "художник"
+  mural: "мурал"
+  photos_mural: "Фотографии к муралу"
+
+  artists: "Художники"
+  from: "из %{from}"
+  edit_artist: "Редактировать художник"
+  editing_artist: "Редактирование художник"
+
+  create_notice: "Запись был успешно создан."
+  update_notice: "Запись был успешно обновлен."
+  destroy_notice: "Запись был успешно уничтожен."
+  deleted_translation_notice: "Удален перевод %{lang} успешно."
+  deleted_translation_cannot_notice: "%{lang} это единственный перевод и он не может быть удален. Вместо этого удалите запись."
+
+  geolocate1: "Вы находитесь в пределах "
+  geolocate2: " метров от этой точки"
+
+
+  views:
+    pagination:
+      first: "<span uk-pagination-previous></span><span uk-pagination-previous></span> Первая"
+      last: "Последняя <span uk-pagination-next></span><span uk-pagination-next></span>"
+      previous: "<span uk-pagination-previous></span> Предыдущая"
+      next: "Следущая <span uk-pagination-next></span>"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Не найдено"
+          one: "Отображенно <b>1</b> %{entry_name}"
+          other: "Отображенно <b>все %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Отображенно %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> из <b>%{total}</b>"
+
+  simple_form:
+    "yes": 'Да'
+    "no": 'Нет'
+    required:
+      text: 'обязательно'
+      mark: '*'
+    error_notification:
+      default_message: "Ознакомьтесь со следующими проблемами:"
+    labels:
+      defaults:
+        created_at: "Дата создания"
+        photo_key: "Фото"
+        image_key: "Фото"
+
+        name: "Имя"
+        latitude: "Широта"
+        longitude: "Долгота"
+        country: "Страна"
+        city: "Город"
+        artist: "Художник"
+        link: "Сайт"
+        image: "Изображение"
+        copyright: "Ссылка на источник"
+        mural: "Мурал"
+
+        place: "Место"
+        title: "Название"
+        content: "Содержание"
+        slug: "Дружественный URL"
+        bio: "Биография"
+
+        place_en: "Место"
+        title_en: "Название"
+        content_en: "Содержание"
+        slug_en: "Дружественный URL"
+        bio_en: "Биография"
+
+        place_uk: "Место"
+        title_uk: "Название"
+        content_uk: "Содержание"
+        slug_uk: "Дружественный URL"
+        bio_uk: "Биография"
+
+        place_ru: "Место"
+        title_ru: "Название"
+        content_ru: "Содержание"
+        slug_ru: "Дружественный URL"
+        bio_ru: "Биография"
+
+        place_es: "Место"
+        title_es: "Название"
+        content_es: "Содержание"
+        slug_es: "Дружественный URL"
+        bio_es: "Биография"
+
+        place_de: "Место"
+        title_de: "Название"
+        content_de: "Содержание"
+        slug_de: "Дружественный URL"
+        bio_de: "Биография"
+    placeholders:
+      city:
+        name: "Введите название города"
+      defaults:
+        name: "Укажите имя"
+        place: "Укажите место"
+        link: "Укажите личний сайт"
+        latitude: "Укажите широту"
+        longitude: "Укажите долготу"
+    prompts:
+      defaults:
+        country: "Выберите страну"
+        mural: "Выберите мурал"
+        city: "Выберите город"
+        artist: "Выберите художника"
+  helpers:
+    submit:
+      city:
+        create: 'Добавить город'
+        update: 'Обновить город'
+      mural:
+        create: 'Добавить мурал'
+        update: 'Обновить мурал'
+      artist:
+        create: 'Добавить художника'
+        update: 'Обновить художника'
+      photo:
+        create: 'Добавить фото'
+        update: 'Обновить фото'

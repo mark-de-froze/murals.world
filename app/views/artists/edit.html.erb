@@ -1,0 +1,13 @@
+<% content_for :title do %>
+<legend class="uk-legend"><%= t(:editing_artist) %></legend>
+<% end %>
+
+<% content_for :links do %>
+<%= link_to t(:back), artists_path, class: 'uk-button uk-button-default' %>
+<%= link_to t(:show), @artist, class: 'uk-button uk-button-default' %>
+<%= link_to t(:destroy), @artist, method: :delete, class: 'uk-button uk-button-danger', data: { confirm: t(:confirm) } %>
+<% end %>
+
+<div class="uk-container uk-margin-top">
+  <%= render 'form', artist: @artist %>
+</div>

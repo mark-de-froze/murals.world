@@ -1,0 +1,13 @@
+<% content_for :title do %>
+<legend class="uk-legend"><%= t(:editing) %> <%= t(:users_role) %></legend>
+<% end %>
+
+<% content_for :links do %>
+<%= link_to t(:back), users_roles_path, class: 'uk-button uk-button-default' %>
+<%= link_to t(:show), @users_role, class: 'uk-button uk-button-default' %>
+<%= link_to t(:destroy), @users_role, method: :delete, class: 'uk-button uk-button-danger', data: { confirm: t(:confirm) } %>
+<% end %>
+
+<div class="uk-container uk-margin-top">
+  <%= render 'form', users_role: @users_role %>
+</div>

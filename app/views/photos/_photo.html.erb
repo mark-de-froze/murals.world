@@ -1,0 +1,15 @@
+<div class="uk-inline">
+  <div class="uk-cover-container">
+    <canvas height="250"></canvas>
+    <a href="<%=mural_photo_path(photo.mural, photo)%>" uk-cover>
+      <%=image_tag(photo.image)%>
+    </a>
+  </div>
+  <div class="uk-position-bottom uk-padding-small uk-overlay-primary uk-text-center"><%=photo.image_identifier %></div>
+  <div class="uk-position-top-right uk-padding-small uk-overlay-primary uk-text-center">
+    <%= link_to content_tag(:span, nil, 'uk-icon': :'icon: pencil', title: t(:edit)),
+                edit_mural_photo_path(photo.mural, photo) %>
+    <%= link_to content_tag(:span, nil, 'uk-icon': :'icon: trash', title: t(:destroy)),
+                [photo.mural, photo], method: :delete, data: { confirm: t(:confirm) } %>
+  </div>
+</div>

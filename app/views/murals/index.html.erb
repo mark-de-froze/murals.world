@@ -1,0 +1,18 @@
+<% content_for :search do %>
+    <%= render 'layouts/search' %>
+<% end %>
+
+<div class="uk-container uk-container-expand uk-margin-top">
+  <div uk-grid>
+    <div class="uk-width-auto">
+      <legend class="uk-legend"><%=t(:murals)%></legend>
+    </div>
+    <div class="uk-width-expand">
+      <div class="uk-float-right">
+        <%= link_to t(:new), new_mural_path, class: 'uk-button uk-button-primary' if current_user_is_admin %>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'murals/murals' %>
+</div>

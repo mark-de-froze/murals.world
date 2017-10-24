@@ -1,0 +1,176 @@
+es:
+  app_name: "Murals"
+  description: "Murals all over the world. Research the history of murals and their location. Get directions and explore your city."
+  title: "mapa de murales de todo el mundo"
+  about:
+    index:
+      title: "Acerca de"
+  en: "Inglés"
+  uk: "Ucraniano"
+  ru: "Ruso"
+  es: "Español"
+  de: "Alemán"
+
+  kyiv: "Kyiv"
+
+  search: "Buscar"
+  login: "Iniciar sesión"
+  logout: "Cerrar sesión"
+  attach: "Adjunte la foto moviéndola aquí o"
+  upload: "Subir"
+
+  you: "Tú"
+  new: "Añadir"
+  show: "Mostrar"
+  edit: "Editar"
+  destroy: "Destruir"
+  confirm: "¿Estás seguro?"
+  support_geolocation: "Su navegador no admite geolocalización"
+  failed_geolocation: "La geolocalización falló: "
+  back: "Atrás"
+  count: "Número de"
+  name: "Nombre"
+  image: "Imagen"
+  copyright: "Derechos de autor"
+  editing: "Editar"
+
+  switch_to: "Cambiar a %{lang}"
+
+  cities: "Ciudades"
+  city: "ciudad"
+  edit_city: "Editar ciudad"
+  editing_city: "Editar ciudad"
+  destroy_city: "Destruir ciudad"
+
+  murals: "Murales"
+  destroy_translate: "Destruir %{lang} traducción"
+  confirm_translate: "¿Está seguro de que desea eliminar esta traducción de %{lang}? Esto no se puede deshacer."
+  edit_mural: "Editar mural"
+  add_photo: "Añadir foto"
+  edit_photos: "Editar fotos"
+  editing_photo: "Editar foto"
+  editing_mural: "Editar foto"
+  destroy_mural: "Destruir mural"
+  photo: "Foto"
+  artist: "artista"
+  mural: "mural"
+  photos_mural: "Fotos mural"
+
+  artists: "Artistas"
+  from: "de %{from}"
+  edit_artist: "Editar artista"
+  editing_artist: "Editar artista"
+
+  create_notice: "Recurso fue creado con éxito."
+  update_notice: "Recurso fue actualizado con éxito."
+  destroy_notice: "Recurso fue destruido con éxito."
+  deleted_translation_notice: "Destruir %{lang} translation successfully."
+  deleted_translation_cannot_notice: "%{lang} es la única traducción que queda y no se puede eliminar. En su lugar, elimine el registro."
+
+  geolocate1: "Estás dentro de los "
+  geolocate2: " metros desde este punto"
+
+  views:
+    pagination:
+      first: "<span uk-pagination-previous></span><span uk-pagination-previous></span> Primera"
+      last: "Última <span uk-pagination-next></span><span uk-pagination-next></span>"
+      previous: "<span uk-pagination-previous></span> Pagina anterior"
+      next: "Siguiente página <span uk-pagination-next></span>"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "No encontrado"
+          one: "Mostrando <b>1</b> %{entry_name}"
+          other: "Mostrando <b>all %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Mostrando %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b>"
+
+  simple_form:
+    "yes": 'Sí'
+    "no": 'No'
+    required:
+      text: 'necesario'
+      mark: '*'
+    error_notification:
+      default_message: "Por favor revise los siguientes problemas:"
+    labels:
+      defaults:
+        created_at: "Creado en"
+        photo_key: "Foto"
+        image_key: "Foto"
+
+        name: "Nombre"
+        latitude: "Latitud"
+        longitude: "Longitud"
+        country: "País"
+        city: "City"
+        artist: "Artista"
+        link: "Sitio"
+        image: "Imagen"
+        copyright: "Derechos de autor"
+        mural: "Mural"
+
+        place: "Lugar"
+        title: "Título"
+        content: "La descripción"
+        slug: "URL amigable"
+        bio: "Biografía"
+
+        place_en: "Lugar"
+        title_en: "Título"
+        content_en: "La descripción"
+        slug_en: "URL amigable"
+        bio_en: "Biografía"
+
+        place_uk: "Lugar"
+        title_uk: "Título"
+        content_uk: "La descripción"
+        slug_uk: "URL amigable"
+        bio_uk: "Biografía"
+
+        place_ru: "Lugar"
+        title_ru: "Título"
+        content_ru: "La descripción"
+        slug_ru: "URL amigable"
+        bio_ru: "Biografía"
+
+        place_es: "Lugar"
+        title_es: "Título"
+        content_es: "La descripción"
+        slug_es: "URL amigable"
+        bio_es: "Biografía"
+
+        place_de: "Lugar"
+        title_de: "Título"
+        content_de: "La descripción"
+        slug_de: "URL amigable"
+        bio_de: "Biografía"
+    placeholders:
+      defaults:
+        name: "Ingrese el título"
+        place: "Entrar en el lugar"
+        link: "Entrar en el sitio"
+        latitude: "Entrar latitud"
+        longitude: "Entrar longitud"
+    prompts:
+      defaults:
+        country: "Por favor seleccione un país"
+        mural: "Por favor seleccione mural"
+        city: "Por favor seleccione una ciudad"
+        artist: "Por favor selecciona el artista"
+  helpers:
+    submit:
+      city:
+        create: 'Crear ciudad'
+        update: 'Editar ciudad'
+      mural:
+        create: 'Crear mural'
+        update: 'Editar mural'
+      artist:
+        create: 'Crear artista'
+        update: 'Editar artista'
+      photo:
+        create: 'Crear foto'
+        update: 'Editar foto'

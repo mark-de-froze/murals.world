@@ -1,0 +1,14 @@
+<% content_for :title do %>
+<legend class="uk-legend"><%= t(:editing_mural) %></legend>
+<% end %>
+
+<% content_for :links do %>
+<%= link_to t(:show), @mural, class: 'uk-button uk-button-default' %>
+<%= link_to t(:destroy), @mural, method: :delete, class: 'uk-button uk-button-danger', data: { confirm: t(:confirm) } %>
+
+<%= link_to t(:add_photo), new_mural_photo_path(@mural), class: 'uk-button uk-button-primary' %>
+<% end %>
+
+<div class="uk-container uk-margin-top">
+  <%= render 'form', mural: @mural %>
+</div>

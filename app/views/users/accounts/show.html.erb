@@ -1,0 +1,12 @@
+<div class="uk-card uk-card-default">
+  <div class="uk-card-body">
+    <dl class="uk-description-list uk-description-list-divider">
+  <dt><%= t(:email)%></dt>
+  <dd><%= @users_account.email %></dd>
+    </dl>
+  </div>
+  <div class="uk-card-footer">
+    <%= link_to t(:edit), edit_users_account_path(@users_account), class: 'uk-button uk-button-text' %> |
+    <%= link_to t(:back), users_accounts_path, class: 'uk-button uk-button-text' %>
+  </div>
+</div>

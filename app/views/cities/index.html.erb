@@ -1,0 +1,42 @@
+<div class="uk-container uk-container-expand uk-margin-top">
+  <div uk-grid>
+    <div class="uk-width-auto">
+      <legend class="uk-legend"><%= t(:cities) %></legend>
+    </div>
+    <div class="uk-width-expand">
+      <div class="uk-float-right">
+        <%= link_to t(:new), new_city_path, class: 'uk-button uk-button-primary' if current_user_is_admin %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-4@xl" uk-grid>
+    <% @cities.each do |city| %>
+        <div>
+          <div class="uk-inline uk-margin-remove uk-width-1-1">
+            <a href="<%= city_path(city) %>">
+            <div class="uk-cover-container">
+              <canvas height="300"></canvas>
+              <img class="uk-width-1-1 uk-height-medium" uk-cover src="<%=city.google_staticmap%>" alt="">
+            </div>
+
+            <% if current_user_is_admin %>
+            <div class="uk-position-top-right uk-padding-small uk-overlay-primary uk-text-center">
+              <%= link_to content_tag(:span, nil, 'uk-icon': :'icon: pencil', title: t(:edit)),
+                          edit_city_path(city) %>
+              <%= link_to content_tag(:span, nil, 'uk-icon': :'icon: trash', title: t(:destroy)),
+                          city, method: :delete, data: { confirm: t(:confirm) } %>
+            </div>
+            <% end %>
+            <div class="uk-position-bottom uk-padding-small uk-overlay-primary uk-text-center">
+              <%= link_to city.to_label, city %>
+            </div>
+            </a>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<%= paginate @cities, views_prefix: 'layouts' %>
