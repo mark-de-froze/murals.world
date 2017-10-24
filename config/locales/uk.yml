@@ -57,7 +57,7 @@ uk:
   photos_mural: "Фотографії мурала"
 
   artists: "Художники"
-  from: "з %{from}а"
+  from: "з %{from}"
   edit_artist: "Редагувати художника"
   editing_artist: "Редагування художника"
 
