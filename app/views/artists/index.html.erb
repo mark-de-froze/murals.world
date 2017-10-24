@@ -25,6 +25,7 @@
             <td>
               <%= link_to artist.name, artist %>
               <%= t(:from, from: artist.city.to_label) if artist.city %>
+              <%= t(:from, from: artist.country_name) unless artist.city %>
             </td>
             <td><%= artist.murals.size %></td>
             <td class="uk-table-shrink"></td>

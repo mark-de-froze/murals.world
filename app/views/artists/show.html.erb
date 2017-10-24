@@ -12,8 +12,10 @@
 
   <article class="uk-article">
     <h1 class="uk-article-title"><%= @artist.name %>
-      <% if @artist.city %>
+      <% if @artist.city.present? %>
         <span class="uk-badge"><%= @artist.city.to_label %></span>
+      <% else %>
+        <span class="uk-badge"><%= @artist.country_name %></span>
       <% end %>
     </h1>
     <p class="uk-article-meta"><%= link_to @artist.link_host, @artist.link if @artist.link %></p>
