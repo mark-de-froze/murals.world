@@ -9,6 +9,7 @@
 /.idea
 /public/uploads
 /config/application.yml
+/db/seeds.rb
 
 # Ignore all logfiles and tempfiles.
 /test/*

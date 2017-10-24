@@ -5,7 +5,7 @@ class Photo < ApplicationRecord
   belongs_to :mural
 
   resourcify
-  #mount_uploader :image, S3Uploader
+  mount_uploader :image, S3Uploader
 
   def to_label
     "#{image_identifier}"

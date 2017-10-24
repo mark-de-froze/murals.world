@@ -7,7 +7,7 @@ class Mural < ApplicationRecord
   has_many :photos, dependent: :destroy
 
   resourcify
-  #mount_uploader :photo, S3Uploader
+  mount_uploader :photo, S3Uploader
   paginates_per 6
 
   accepts_nested_attributes_for :photos, reject_if: :all_blank, :allow_destroy => true
