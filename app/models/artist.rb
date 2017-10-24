@@ -1,6 +1,7 @@
 class Artist < ApplicationRecord
   include OrderUpdatedAt
   include Searchable
+  include Country
 
   belongs_to :city, optional: true
   has_many :murals, dependent: :destroy

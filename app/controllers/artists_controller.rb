@@ -83,7 +83,7 @@ class ArtistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artist_params
-      permitted = Artist.globalize_attribute_names + [:city_id, :link, :slug, :name]
+      permitted = Artist.globalize_attribute_names + [:country, :city_id, :link, :slug, :name]
       params.require(:artist).permit(*permitted)
     end
 end

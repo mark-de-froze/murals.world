@@ -15,10 +15,14 @@
 
   <div>
     <div class="uk-margin-top uk-child-width-1-4" uk-grid>
+      <div><%= f.input :country, as: :country, priority: @artist.countries, prompt: :translate %></div>
       <div><%= f.association :city, prompt: :translate %></div>
-      <div><%= f.input :link %></div>
       <div><%= f.input :name %></div>
       <div><%= f.input :slug if @artist.slug.present? %></div>
+    </div>
+
+    <div class="uk-margin-small-top">
+      <%= f.input :link %>
     </div>
 
     <ul uk-tab>

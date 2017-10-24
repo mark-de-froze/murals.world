@@ -1,4 +1,5 @@
 class City < ApplicationRecord
+  include Country
   include OrderUpdatedAt
 
   has_many :artists, dependent: :destroy
@@ -8,7 +9,7 @@ class City < ApplicationRecord
   paginates_per 4
 
   include ValidatesLatlng
-  validates :name, :country, presence: true
+  validates :name, presence: true
 
   include Sluggable
   def slug_candidates
@@ -17,15 +18,6 @@ class City < ApplicationRecord
         [:country, :name],
         [:latitude, :longitude],
     ]
-  end
-
-  def countries
-    ['UA','BY','RU']
-  end
-
-  def country_name
-    country_name = ISO3166::Country[country]
-    country_name.translations[I18n.locale.to_s] || country_name.name
   end
 
   def google_staticmap

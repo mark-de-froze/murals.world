@@ -30,7 +30,7 @@
 
       <div class="uk-margin-top">
         <%=image_tag(@uploader.direct_fog_url+@photo.image_key)%>
-        <%= f.input :image_key, as: :string, input_html: {value: @photo.image_identifier} %>
+        <%= f.input :image_key, as: :string %>
         <%= f.input :copyright %>
         <%= f.association :mural %>
       </div>

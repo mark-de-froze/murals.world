@@ -70,6 +70,10 @@ class PhotosController < ApplicationController
       if params[:key].present?
         @photo.image_key = params[:key]
       end
+
+      if @photo.image.present?
+        @photo.image_identifier
+      end
     end
     # Only allow a trusted parameter "white list" through.
     def photo_params
