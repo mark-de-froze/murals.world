@@ -81,8 +81,12 @@
           <div>
           <% @mural.globalize_attribute_names.each do |attr| %>
               <% if attr.to_s.end_with?(locale.to_s) %>
+                <% if attr.to_s.start_with?('content') %>
+                  <%= f.input attr, as: :text, input_html: {style: 'height: 200px' }%>
+                <% else %>
                   <%= f.input attr %>
-              <% end %>
+                <% end %>
+            <% end %>
           <% end %>
           </div>
       <% end %>

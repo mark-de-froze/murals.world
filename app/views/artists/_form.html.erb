@@ -36,7 +36,11 @@
           <div>
             <% @artist.globalize_attribute_names.each do |globalize_attribute_name| %>
                 <% if globalize_attribute_name.to_s.end_with?(locale.to_s) %>
-                    <%= f.input globalize_attribute_name %>
+                    <% if globalize_attribute_name.to_s.start_with?('bio') %>
+                        <%= f.input globalize_attribute_name, as: :text, input_html: {style: 'height: 200px' }%>
+                    <% else %>
+                        <%= f.input globalize_attribute_name %>
+                    <% end %>
                 <% end %>
             <% end %>
           </div>
