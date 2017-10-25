@@ -1,3 +1,4 @@
+=begin
 user = User.create(email: 'mail@markdefroze.com', password: 'cwr1414')
 User.find(1).add_role('admin')
 City.create(name: 'Kyiv', latitude: 50.4501, longitude: 30.523400000000038, country: 'UA', slug: 'kyiv')
@@ -566,3 +567,4 @@ Photo.create(mural_id: 148, image: 'turhenivska_2-3.jpg', copyright: 'http://vki
 Mural.create(latitude: 50.4615332, longitude: 30.356908400000066, city_id: 1, photo: 'akademika_palladina_22_0.jpg', title_uk: 'Честер Беннінгтон', place_uk: 'Проспект Академіка Палладіна 22', slug_uk: 'prospekt-akademika-palladina-22', place_ru: 'Проспект Академика Палладина 22', slug_ru: 'prospekt-akademika-palladina-22', place_en: "Akademika Palladina Avenue, 22", slug_en: 'akademika-palladina-avenue-22', place_es: "Akademika Palladina Avenue, 22", slug_es: 'akademika-palladina-avenue-22', place_de: "Akademika Palladina Avenue, 22", slug_de: 'akademika-palladina-avenue-22' )
 Photo.create(mural_id: 149, image: 'akademika_palladina_22_0.jpg')
 
+=end

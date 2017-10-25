@@ -132,7 +132,7 @@ class MuralsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mural_params
-      permitted = Mural.globalize_attribute_names + [:created_at, :latitude, :longitude, :city_id, :photo_key, :artist_id, photos_attributes: [ :id, :copyright, :image_key, :_destroy]]
+      permitted = Mural.globalize_attribute_names + [:created_at, :is_display_created_at, :latitude, :longitude, :city_id, :photo_key, :artist_id, photos_attributes: [ :id, :copyright, :image_key, :_destroy]]
 
       params.require(:mural).permit(*permitted)
     end

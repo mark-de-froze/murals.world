@@ -148,6 +148,7 @@ en:
         content_de: "Content"
         slug_de: "Friendly URL"
         bio_de: "Biography"
+        is_display_created_at: "Display date"
     placeholders:
       defaults:
         email: "Enter email"

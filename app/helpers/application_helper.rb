@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def date date, format = :long
+    I18n.localize date, format: format
+  end
+
   def meta_tags
     [
       tag("meta", name: "mapbox-access-token", content: ENV.fetch('mapbox_access_token'))

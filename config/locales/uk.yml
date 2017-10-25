@@ -147,6 +147,7 @@ uk:
         content_de: "Вміст"
         slug_de: "Дружня URL-адреса"
         bio_de: "Біографія"
+        is_display_created_at: "Відображати дату"
     placeholders:
       city:
           name: "Вкажіть назву міста"

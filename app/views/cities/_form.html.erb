@@ -18,6 +18,7 @@
     <div uk-grid>
       <div class="uk-width-1-3">
         <%= f.input :name %>
+        <%= f.input :slug if @city.slug.present? %>
         <%= f.input :latitude %>
         <%= f.input :longitude %>
       </div>

@@ -148,6 +148,7 @@ ru:
         content_de: "Содержание"
         slug_de: "Дружественный URL"
         bio_de: "Биография"
+        is_display_created_at: "Отображать дату"
     placeholders:
       city:
         name: "Введите название города"

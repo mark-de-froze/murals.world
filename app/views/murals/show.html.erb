@@ -44,7 +44,10 @@
 <% end %>
 <div class="uk-container uk-margin">
   <article class="uk-article">
-    <h1 class="uk-article-title"><%= @mural.title %> <%= @mural.to_label %></h1>
+    <h1 class="uk-article-title"><% if @mural.title.present? %>"<%= @mural.title %>"<% end %> <%= @mural.to_label %></h1>
+    <% if @mural.is_display_created_at.present? %>
+    <p class="uk-text-meta"><%= date(@mural.created_at, '%d %B, %Y') %></p>
+    <% end %>
     <p class="uk-text-lead"><%= @mural.content_html %></p>
     <% if @mural.artist %>
     <blockquote cite="#">
