@@ -41,4 +41,17 @@ class ApplicationController < ActionController::Base
       format.html { redirect_to root_url, notice: exception.message}
     end
   end
+  if Rails.env.production?
+    rescue_from ActiveRecord::RecordNotFound do |exception|
+      respond_to do |format|
+        format.html { render 'errors/404' }
+      end
+    end
+
+    rescue_from Exception do |exception|
+      respond_to do |format|
+        format.html { render 'errors/500' }
+      end
+    end
+  end
 end
