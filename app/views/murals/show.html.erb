@@ -21,16 +21,15 @@
 
 <% if @photos.present? %>
 <div class="uk-inline uk-width-1-1">
-  <ul class="uk-dotnav uk-position-bottom uk-overlay uk-overlay-default uk-padding-small uk-position-z-index" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+  <ul uk-lightbox class="uk-dotnav uk-position-bottom uk-overlay uk-overlay-default uk-padding-small uk-position-z-index" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
     <% @photos.each do |photo| %>
-      <li><a href="#"><%= t(:photo) %> <%= photo.id %></a></li>
+      <li><a href="<%= photo.image %>"><%= t(:photo) %> <%= photo.id %></a></li>
     <% end %>
   </ul>
 
-  <ul class="uk-switcher" uk-lightbox>
+  <ul class="uk-switcher">
     <% @photos.each do |photo| %>
       <li>
-        <a href="<%= photo.image %>">
         <div style="background-image: url(<%= photo.image %>);" class="uk-background-cover uk-height-large uk-background-muted uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle">
           <% if photo.copyright.present? %>
               <div class="uk-position-top-right uk-padding-small uk-overlay-default"><%=t(:photo)%>:
@@ -38,7 +37,6 @@
               </div>
           <% end %>
         </div>
-        </a>
       </li>
     <% end %>
   </ul>
