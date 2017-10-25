@@ -21,7 +21,7 @@
       <% end %>
     </h1>
     <p class="uk-article-meta"><%= link_to @artist.link_host, @artist.link if @artist.link %></p>
-    <p class="uk-text-lead"><%= @artist.bio %></p>
+    <p class="uk-text-lead"><%= @artist.bio_html %></p>
   </article>
 
   <%= render 'murals/murals' %>

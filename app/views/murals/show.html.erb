@@ -45,7 +45,7 @@
 <div class="uk-container uk-margin">
   <article class="uk-article">
     <h1 class="uk-article-title"><%= @mural.title %> <%= @mural.to_label %></h1>
-    <p class="uk-text-lead"><%= @mural.content %></p>
+    <p class="uk-text-lead"><%= @mural.content_html %></p>
     <% if @mural.artist %>
     <blockquote cite="#">
       <footer><%= t(:artist)%> <cite><%=link_to @mural.artist.to_label, @mural.artist %></cite></footer>
