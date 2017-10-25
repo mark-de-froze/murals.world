@@ -51,8 +51,10 @@ class Mural < ApplicationRecord
   end
 
   def content_html
-    renderer = Redcarpet::Render::HTML.new(filter_html: true, no_images: true, hard_wrap: true)
-    markdown = Redcarpet::Markdown.new(renderer, extensions = {})
-    markdown.render(content).html_safe
+    if content.present?
+      renderer = Redcarpet::Render::HTML.new(filter_html: true, no_images: true, hard_wrap: true)
+      markdown = Redcarpet::Markdown.new(renderer, extensions = {})
+      markdown.render(content).html_safe
+    end
   end
 end

@@ -37,8 +37,10 @@ class Artist < ApplicationRecord
   end
 
   def bio_html
-    renderer = Redcarpet::Render::HTML.new(filter_html: true, no_images: true, hard_wrap: true)
-    markdown = Redcarpet::Markdown.new(renderer, extensions = {})
-    markdown.render(bio).html_safe
+    if bio.present?
+      renderer = Redcarpet::Render::HTML.new(filter_html: true, no_images: true, hard_wrap: true)
+      markdown = Redcarpet::Markdown.new(renderer, extensions = {})
+      markdown.render(bio).html_safe
+    end
   end
 end
