@@ -27,9 +27,10 @@
     <% end %>
   </ul>
 
-  <ul class="uk-switcher">
+  <ul class="uk-switcher" uk-lightbox>
     <% @photos.each do |photo| %>
       <li>
+        <a href="<%= photo.image %>">
         <div style="background-image: url(<%= photo.image %>);" class="uk-background-cover uk-height-large uk-background-muted uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle">
           <% if photo.copyright.present? %>
               <div class="uk-position-top-right uk-padding-small uk-overlay-default"><%=t(:photo)%>:
@@ -37,6 +38,7 @@
               </div>
           <% end %>
         </div>
+        </a>
       </li>
     <% end %>
   </ul>
