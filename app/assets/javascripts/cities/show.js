@@ -1,5 +1,5 @@
-var latitude = $('#map').data('latitude');
-var longitude = $('#map').data('longitude');
+var latitude = document.querySelector('#map').dataset.latitude;
+var longitude = document.querySelector('#map').dataset.longitude;
 
 var map = L.map('map').setView([latitude, longitude], 12);
 

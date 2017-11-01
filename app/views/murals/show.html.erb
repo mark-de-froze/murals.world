@@ -20,29 +20,30 @@
 <% end %>
 
 <% if @photos.present? %>
-<div class="uk-inline uk-width-1-1">
-  <ul uk-lightbox class="uk-dotnav uk-position-bottom uk-overlay uk-overlay-default uk-padding-small uk-position-z-index" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
-    <% @photos.each do |photo| %>
-      <li><a href="<%= photo.image %>"><%= t(:photo) %> <%= photo.id %></a></li>
-    <% end %>
-  </ul>
-
-  <ul class="uk-switcher">
-    <% @photos.each do |photo| %>
+<div uk-slideshow="autoplay: true; animation: pull; ratio: 16:9">
+  <div class="uk-position-relative uk-visible-toggle">
+    <ul class="uk-slideshow-items" uk-height-viewport="min-height: 300">
+      <% @photos.each do |photo| %>
       <li>
-        <div style="background-image: url(<%= photo.image %>);" class="uk-background-cover uk-height-large uk-background-muted uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle">
-          <% if photo.copyright.present? %>
-              <div class="uk-position-top-right uk-padding-small uk-overlay-default"><%=t(:photo)%>:
-                <%= link_to photo.copyright_host, photo.copyright, rel: 'nofollow' %>
-              </div>
-          <% end %>
+        <img src="<%= photo.image %>" alt="" uk-cover>
+        <div class="uk-position-top-right uk-padding-small uk-overlay-default uk-transition-slide-bottom">
+          <%=t(:photo)%>: <%= link_to photo.copyright_host, photo.copyright, rel: 'nofollow' %>
         </div>
       </li>
+      <% end %>
+    </ul>
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+  </div>
+  <ul class="uk-dotnav uk-flex-center uk-margin">
+    <% @photos.each do |photo| %>
+      <li uk-slideshow-item="<%=photo.id%>"><a href="#"><%=t(:mural)%> <%=photo.id%></a></li>
     <% end %>
   </ul>
 </div>
 <% end %>
-<div class="uk-container uk-margin">
+
+<div class="uk-container uk-container-expand uk-margin">
   <article class="uk-article">
     <h1 class="uk-article-title"><% if @mural.title.present? %>"<%= @mural.title %>"<% end %> <%= @mural.to_label %></h1>
     <% if @mural.is_display_created_at.present? %>

@@ -1,7 +1,6 @@
-var latitude = $('#map').data('latitude');
-var longitude = $('#map').data('longitude');
-
-var photo = $('#mural').data('src');
+var latitude = document.querySelector('#map').dataset.latitude;
+var longitude = document.querySelector('#map').dataset.longitude;
+var photo = document.querySelector('#mural').dataset.src;
 
 var map = L.map('map', {
     inertia: true,
